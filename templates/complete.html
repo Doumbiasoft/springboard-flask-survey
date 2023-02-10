@@ -1,0 +1,17 @@
+
+{% extends 'main.html' %}
+
+{% block title %} Survey {% endblock %}
+
+{% block body %}
+
+<div>
+    <a class="linkButton" href="/">Retake the survey</a><br>
+    <h1>Thank you for completing this survey!</h1>
+    <h2 style="color: brown;">Summary</h2>
+    {% for i in range(size) %}
+    <h3>{{i+1}} - {{questions[i].question}} - [ Response: <span style="color: brown;">{{ responses[i] }}</span> ]</h3>
+    {% endfor %}
+    
+</div>
+{% endblock %}
